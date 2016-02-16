@@ -30,6 +30,14 @@ module.exports = function(config) {
   'use strict';
   config.set({
     frameworks: ['mocha', 'sinon-chai'],
+
+    # chai config
+    client: {
+      chai: {
+        includeStack: true
+      }
+    }
+
     #...
   });
 }
