@@ -24,9 +24,12 @@
     "Greg Thornton <xdissent@me.com>",
     "Tobias Kopelke <nox@raynode.de>"
   ],
+  "peerDependencies": {
+    "chai": "^3.2.0",
+    "lolex": "^1.4.0",
+    "sinon": "^1.16.0"
+  },
   "dependencies": {
-    "chai": "~3.2.0",
-    "sinon": "~1.16.0",
     "sinon-chai": "~2.8.0"
   },
   "devDependencies": {}

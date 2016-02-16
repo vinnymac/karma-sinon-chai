@@ -22,12 +22,16 @@ var _isDuplicate = function(files, file) {
 var framework = function(files) {
   var isDuplicate = _isDuplicate.bind(this, files)
 
+  /* Lolex */
+  var lolexPath = path.resolve(require.resolve('lolex'), '../../lolex.js');
+
   /* Sinon */
   var sinonRoot = path.resolve(require.resolve('sinon'), '../../')
   var sinonPath = path.resolve(sinonRoot, 'pkg/sinon.js');
   var sinonTimersPath = path.resolve(sinonRoot, 'pkg/sinon-timers.js');
   if (!isDuplicate(sinonPath)) {
     files.unshift(pattern(sinonTimersPath));
+    files.unshift(pattern(lolexPath));
     files.unshift(pattern(sinonPath));
   }
 
